@@ -19,8 +19,8 @@ var dayProgress = setInterval(function() {
 var weekProgress = setInterval(function() {
 
   // Get todays date and time
-  var sow = moment().startOf('isoWeek');
-  var eow = moment().add(1, 'w').startOf('isoWeek');
+  var sow = moment().startOf('week');
+  var eow = moment().startOf('week').add(1, 'w');
   var total = eow.diff(sow)
   var now = moment();
   var distance = eow.diff(now);
